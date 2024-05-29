@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height:100vh;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='72.5' stroke-opacity='0.08' %3E%3Ccircle fill='%23800000' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23820202' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23830404' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23850707' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23860909' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23870c0c' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23880e0e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23891111' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%238a1414' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%238b1717' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%238b1a1a' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%238c1d1d' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%238c2121' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%238c2424' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%238c2828' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%238c2b2b' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%238c2f2f' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%238C3333' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginform
+{
+    width:min(450px,95%);
+    height: 580px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius:10px;
+    transition: all 1s;
+}
+
+.loginform:hover{
+    box-shadow: 0 0 100px 0px rgb(121, 97, 239),0 0 400px 10px rgb(121, 97, 239);
+    animation: blink 2s infinite;
+    background-color: #fff;
+}
+@keyframes blink {
+    0%,100%{
+        box-shadow: 0 0 100px 0px rgb(23,123,60),0 0 400px 10px rgb(128, 2, 2);
+    }
+    40%,50%,60%
+    {
+        box-shadow: 0 0 50px 0px rgb(128, 2, 2),0 0 100px 0px rgb(128, 2, 2);
+    }
+}
+
+.inputgroup
+{
+    position:relative; 
+    height:50px;
+    width:85%;  
+}
+
+.inputgroup input
+{
+    position:absolute;
+    width:100%;
+    height:45px;
+    background: transparent;
+    outline:none;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:solid 1px #333;
+    color:#333;
+    font-size: 20px;
+    transition: all 200ms;
+}
+
+.inputgroup label
+{
+    position:absolute;
+    transition: all 200ms;
+    color:#333;
+}
+
+.inputgroup input:hover +label,
+.inputgroup input:focus +label,
+.inputgroup input:valid +label
+{
+    transform: translateY(-10px);
+    color: #7A9D54;
+}
+.inputgroup input:hover ,
+.inputgroup input:focus ,
+.inputgroup input:valid 
+{
+    
+    border-bottom:solid 1px #7A9D54;
+}
+
+.topmargin{
+    margin-top: 50px;
+}
+.topmarginlarge{
+    margin-top: 80px;
+}
+
+.divcallforaction
+{
+    width:85%;
+    height:45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnlogin
+{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 45px;
+    max-width: 180px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 15px 0;
+    background-color: #7A9D54;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    transition: all 200ms;
+}
+.btnlogin:hover{
+    background-color: #557A46;
+    transition: all 200ms;
+}
+.inactivecolor
+{
+    background-color: rgb(190, 22, 22);
+}
+.activecolor
+{
+    background-color: #7A9D54;
+}
+
+.diverror
+{
+    background-color: transparent;
+    color:#333;
+    height:45px;
+    width:85%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+    letter-spacing: 1px;
+}
+.applyerrordiv
+{
+    visibility: visible;
+    opacity: 1;
+    animation:normal 1s linear;
+}
+@keyframes falldown {
+    0%{opacity: 0;transform: translateY(-100px);}
+    49%{opacity: 1;transform: translateY(0px);letter-spacing: 1px;}
+    50%{opacity: 1;transform: translateY(0px);letter-spacing: 3px;}
+    55%{opacity: 1;transform: translateY(0px);letter-spacing: 1px;}
+    60%{opacity: 1;transform: translateY(-50px);}
+    80%{opacity: 1;transform: translateY(0px);}
+    85%{opacity: 1;transform: translateY(-10px);}
+    100%{opacity: 1;transform: translateY(0px);}
+}
+
+.logo1 {
+    position: absolute;
+    height: 150px;
+    width: 190px;
+    top: 30px;
+    left: 40px;
+    margin-left: 10px;
+}
+
+.logo2 {
+    position: absolute;
+    height: 78px;
+    width: 265px;
+    top: 67px;
+    left: 300px;
+}
+.title {
+font-weight: 600;
+  display: flex;
+  justify-content: center;
+  color: #333;
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
