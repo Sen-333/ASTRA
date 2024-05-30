@@ -14,26 +14,24 @@ body{
     background-attachment: fixed;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
-
-.loginform
-{
-    width:min(450px,95%);
-    height: 580px;
+form {
+    width: min(600px, 95%);
+    height: 50%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #fff;
-    border-radius:10px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 100px; /* Adjust this value as needed */
     transition: all 1s;
 }
 
-.loginform:hover{
+form:hover {
     box-shadow: 0 0 100px 0px rgb(121, 97, 239),0 0 400px 10px rgb(121, 97, 239);
     animation: blink 1s infinite;
     background-color: #fff;
@@ -48,154 +46,110 @@ body{
     }
 }
 
-.inputgroup
-{
-    position:relative; 
-    height:50px;
-    width:85%;  
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-top: 15px;
 }
 
-.inputgroup input
-{
-    position:absolute;
-    width:100%;
-    height:45px;
+label {
+    color: #555555;
+}
+
+.inputgroup {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.inputgroup input {
+    position: relative;
+    width: 100%;
+    height: 60px;
     background: transparent;
-    outline:none;
-    border-left:none;
-    border-right:none;
-    border-top:none;
-    border-bottom:solid 1px #333;
-    color:#333;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: solid 1px #333;
+    color: #333;
     font-size: 20px;
     transition: all 200ms;
-}
-
-.inputgroup label
-{
-    position:absolute;
-    transition: all 200ms;
-    color:#333;
-}
-
-.inputgroup input:hover +label,
-.inputgroup input:focus +label,
-.inputgroup input:valid +label
-{
-    transform: translateY(-10px);
-    color: #7A9D54;
-}
-.inputgroup input:hover ,
-.inputgroup input:focus ,
-.inputgroup input:valid 
-{
-    
-    border-bottom:solid 1px #7A9D54;
-}
-
-.topmargin{
-    margin-top: 50px;
-}
-.topmarginlarge{
-    margin-top: 80px;
-}
-
-.divcallforaction
-{
-    width:85%;
-    height:45px;
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
-.btnlogin
-{
-    align-items: center;
-    justify-content: center;
+
+.inputgroup label {
     position: absolute;
-    height: 45px;
-    max-width: 180px;
+    top: 0;
+    left: 0;
+    color: #333;
+    transition: all 200ms;
+    pointer-events: none;
+}
+
+.inputgroup input:hover + label,
+.inputgroup input:focus + label,
+.inputgroup input:valid + label {
+    transform: translateY(-20px);
+    color: #7A9D54;
+    font-size: 14px;
+}
+
+.inputgroup input:hover,
+.inputgroup input:focus,
+.inputgroup input:valid {
+    border-bottom: solid 1px #7A9D54;
+}
+button {
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    max-width: 200px;
     width: 100%;
     border: none;
     outline: none;
     color: #fff;
-    border-radius: 5px;
-    margin: 15px 0;
-    background-color: #7A9D54;
+    border-radius: 10px;
+    background-color: rgb(190, 22, 22);
     font-weight: 400;
+    margin: 20px 0;
     cursor: pointer;
     font-size: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    transition: all 200ms;
 }
-.btnlogin:hover{
+
+button:hover {
     background-color: #557A46;
     transition: all 200ms;
 }
-.inactivecolor
-{
-    background-color: rgb(190, 22, 22);
-}
-.activecolor
-{
-    background-color: #7A9D54;
+
+.topmargin {
+    margin-top: 20px;
 }
 
-.diverror
-{
-    background-color: transparent;
-    color:#333;
-    height:45px;
-    width:85%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 1s;
-    letter-spacing: 1px;
+.topmarginsmall {
+    margin-top: 40px;
 }
-.applyerrordiv
-{
-    visibility: visible;
-    opacity: 1;
-    animation:normal 1s linear;
+label[for="name"], label[for="roll_no"] {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 20px;
+    display: block;
 }
-@keyframes falldown {
-    0%{opacity: 0;transform: translateY(-100px);}
-    49%{opacity: 1;transform: translateY(0px);letter-spacing: 1px;}
-    50%{opacity: 1;transform: translateY(0px);letter-spacing: 3px;}
-    55%{opacity: 1;transform: translateY(0px);letter-spacing: 1px;}
-    60%{opacity: 1;transform: translateY(-50px);}
-    80%{opacity: 1;transform: translateY(0px);}
-    85%{opacity: 1;transform: translateY(-10px);}
-    100%{opacity: 1;transform: translateY(0px);}
-}
-
 .logo1 {
     position: absolute;
     height: 150px;
     width: 190px;
-    top: 30px;
-    left: 40px;
+    top: 43%;
+    left: 15em;
     margin-left: 10px;
 }
 
 .logo2 {
     position: absolute;
-    height: 78px;
-    width: 265px;
-    top: 67px;
-    left: 300px;
-}
-.title {
-font-weight: 600;
-  display: flex;
-  justify-content: center;
-  color: #333;
-  font-size: 25px;
-  line-height: 1.5;
-  margin-bottom: 10px;
+    height: 120px;
+    width: 450px;
+    top: 26.5em;
+    left: 30em;
 }

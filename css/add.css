@@ -31,6 +31,21 @@ form {
     transition: all 1s;
 }
 
+form:hover {
+    box-shadow: 0 0 100px 0px rgb(121, 97, 239),0 0 400px 10px rgb(121, 97, 239);
+    animation: blink 1s infinite;
+    background-color: #fff;
+}
+@keyframes blink {
+    0%,100%{
+        box-shadow: 0 0 100px 0px rgb(23,123,60),0 0 400px 10px rgb(128, 2, 2);
+    }
+    40%,50%,60%
+    {
+        box-shadow: 0 0 50px 0px rgb(128, 2, 2),0 0 100px 0px rgb(23,123,60);
+    }
+}
+
 h1 {
     text-align: center;
     color: #333333;
@@ -147,6 +162,6 @@ label[for="courses"], label[for="session"], label[for="name"], label[for="roll_n
     position: absolute;
     height: 120px;
     width: 450px;
-    top: 25.6em;
+    top: 26.5em;
     left: 30em;
 }

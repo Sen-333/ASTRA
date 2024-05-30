@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $roll_no = $_POST["roll_no"];
     $name = $_POST["name"];
     $faculty_ids = $_POST["faculty_id"]; // Array of selected faculty IDs
-    $session_ids = $_POST["session_id"]; // Array of selected session IDs
+    $session_ids = $_POST["session_ids"]; // Array of selected session IDs
     $courses = $_POST["courses"]; // Array of selected course IDs
 
     // Insert student details into student_details table
