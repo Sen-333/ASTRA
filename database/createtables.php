@@ -175,8 +175,7 @@ values
 (1,'vbcalag','12345', 'Vic Calag'),
 (2,'jmcatane','12345', 'Jose Ricardo Catane'),
 (3,'amsatina','12345', 'Armacheska Satina'),
-(4,'hllimpag','12345', 'Hannah Mae Limpag'),
-(5,'cgmanliguez','12345', 'Cinmayii Manliguez')";
+(4,'hllimpag','12345', 'Hannah Mae Limpag')";
 
   $s=$dbo->conn->prepare($c);
   try{
@@ -232,10 +231,10 @@ values
   values
   (:sid,:cid,:sessid)";
   $s=$dbo->conn->prepare($c);
-  //iterate over all the 24 students
-  //for each of them chose max 3 random courses, from 1 to 6
+  //iterate over all the 15 students
+  //for each of them chose max 3 random courses, from 1 to 9
 
-  for($i=1;$i<=24;$i++)
+  for($i=1;$i<=15;$i++)
   {
     for($j=0;$j<3;$j++)
     {
@@ -275,9 +274,9 @@ values
   //iterate over all the 4 teachers
   //for each of them chose max 2 random courses, from 1 to 6
 
-  for($i=1;$i<=4;$i++)
+  for($i=1;$i<=9;$i++)
   {
-    for($j=0;$j<2;$j++)
+    for($j=0;$j<3;$j++)
     {
         $cid=rand(1,6);
         //insert the selected course into course_allotment table for 
